@@ -1,0 +1,205 @@
+header
+{
+    background-image: url(../img/hero/h1_hero.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    .container
+    {
+        max-width: 90% !important;
+        nav
+        {
+            background-color: transparent;
+            a.navbar-brand
+            {
+                color: #fff;
+            }
+            .navbar-toggler
+            {
+                outline: none;
+                span
+                {
+                    background-color: $maincolor;
+                }
+            }
+            div.collapse
+            {
+                ul.navbar-nav
+                {
+                    align-items: inherit;
+                    width: 85%;
+                    justify-content: space-around;
+
+                    li.nav-item
+                    {
+                        a.nav-link
+                        {
+                            transition: all .5s ease-in-out;
+                            font-weight: bold;
+                            &:hover
+                            {
+                                color: $maincolor;
+                            }
+                        }
+                       
+                    }
+
+                    li.unlist
+                    {
+                        position: relative;
+                        ul
+                        {
+                            position: absolute;
+                            width: 170px;
+                            background: rgba(43,43,43,0.7);
+                            left: 0;
+                            top: 94%;
+                            visibility: hidden;
+                            opacity: 0;
+                            box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+                            padding: 17px 0;
+                            transition: .5s;
+                            list-style: none;
+                            li
+                            {
+                                margin: 10px 0;
+                                padding-left: 5px;
+                                color: $pargraphcolor;
+                                a
+                                {
+                                    display: block;
+                                    transition: all .5s ease-in-out;
+                                    color: $pargraphcolor;
+                                    &:hover
+                                    {
+                                        color: $maincolor;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        
+                        }
+                        &:hover
+                        {
+                            ul
+                            {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    li.nav-item
+                    {
+                        padding: 10px 20px;
+                        text-transform: capitalize;
+                        a.nav-link
+                        {
+                            color: #d7d8d8;
+                        }
+                    }
+                    li.last
+                    {
+                        background-color: $maincolor;
+                        padding: 6px 15px;
+                        font-size: 13px;
+                    }
+                    .hvr-bounce-to-right:before {
+
+                        background-color: rgba(10, 1, 1, 0.329);
+                        color: $pargraphcolor;
+                    }
+                }
+            }
+
+        }
+
+        .main-contant
+        {
+            padding-top: 8rem;
+
+            div:nth-of-type(1)
+            {
+                line-height: 1.1;
+                margin-bottom: 65px;
+                font-family: 'Staatliches', cursive;
+                h4
+                {
+                    position: relative;
+                    color: $maincolor;
+                    margin-left: 5rem;
+                    text-transform: capitalize;
+                    font-size: 1.1rem;
+                    &::before
+                    {
+                        @include beforline;
+                    }
+                }
+                p
+                {
+                    color: #d4d7e0;
+                    text-transform: uppercase;
+                    font-size: 5rem;
+                    font-weight: bold;
+                    word-spacing: 7px;
+                    letter-spacing: 3px;
+                }
+                a
+                {
+                    display: inline-block;
+                    padding: 15px 25px;
+                    margin-top: 10px;
+                    background-color: $maincolor;
+                    color: $pargraphcolor;
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+                a.hvr-bounce-to-right:before {
+
+                    background-color: rgba(10, 1, 1, 0.329);
+                    color: $pargraphcolor;
+                }
+            }
+
+            div:nth-of-type(2)
+            {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a
+                {
+                    position: relative;
+                    &::before
+                    {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            top: -5px;
+                            left: -5px;
+                            bottom: -5px;
+                            right: -5px;
+                            border-radius: 50%;
+                            border: 1px solid #ff1313;
+                            animation: btnIconRipple 2s cubic-bezier(0.12, 1, 0.41, 1) both infinite;
+                    }
+                    i
+                    {
+                        background: $maincolor;
+                        width: 80px;
+                        font-size: 31px;
+                        height: 80px;
+                        line-height: 80px;
+                        color: $pargraphcolor;
+                        border-radius: 50%;
+                        display: inline-block;
+                      
+                       
+                    }
+                }
+               
+            }
+        }
+    }
+   
+}
